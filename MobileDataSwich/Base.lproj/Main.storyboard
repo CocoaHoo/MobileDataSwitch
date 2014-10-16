@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
@@ -17,44 +17,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile data enabled: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCI-bQ-pvq">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cellular Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aji-u1-f74">
+                                <rect key="frame" x="20" y="80" width="99" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="Nhb-Mu-4AA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="98" width="203" height="21"/>
-                                </variation>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bIc-Fw-Puv">
-                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="255" y="93" width="51" height="31"/>
-                                </variation>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vIv-Uo-YZS">
+                                <rect key="frame" x="531" y="75" width="51" height="31"/>
                                 <connections>
-                                    <action selector="setMobileDataEnabled:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0vq-sc-VHc"/>
+                                    <action selector="valueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="DGD-oG-vhI"/>
                                 </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="aCI-bQ-pvq"/>
-                                <exclude reference="bIc-Fw-Puv"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="aCI-bQ-pvq"/>
-                                <include reference="bIc-Fw-Puv"/>
-                            </mask>
-                        </variation>
+                        <constraints>
+                            <constraint firstItem="vIv-Uo-YZS" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="75" id="2DO-gG-cDG"/>
+                            <constraint firstItem="aji-u1-f74" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="60" id="AjK-8H-FME"/>
+                            <constraint firstAttribute="trailing" secondItem="vIv-Uo-YZS" secondAttribute="trailing" constant="20" id="UtN-hn-ckj"/>
+                            <constraint firstItem="aji-u1-f74" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="Vw1-dW-dp5"/>
+                            <constraint firstItem="vIv-Uo-YZS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aji-u1-f74" secondAttribute="trailing" constant="20" id="t59-4v-kpv"/>
+                        </constraints>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="400" height="600"/>
                     <connections>
-                        <outlet property="mobileDataSwith" destination="bIc-Fw-Puv" id="jbh-us-7r2"/>
-                        <outlet property="tipsLabel" destination="aCI-bQ-pvq" id="6pb-Jt-AgP"/>
+                        <outlet property="mobileDataSwith" destination="vIv-Uo-YZS" id="JUn-Qr-qgE"/>
+                        <outlet property="tipsLabel" destination="aji-u1-f74" id="Q09-ed-lu0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

@@ -17,28 +17,31 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
 
 @implementation ViewController
 
+- (void)viewDidLoad
+{
+    
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
-    BOOL enabled = [self refreshMobileDataState];
+    self.tipsLabel.text = NSLocalizedString(@"Cellular Data", nil);
+    
+    BOOL enabled = CTCellularDataPlanGetIsEnabled();
     self.mobileDataSwith.on = enabled;
 }
 
 #pragma mark - IBAction
-- (IBAction)setMobileDataEnabled:(BOOL)enabled
-{
-    CTCellularDataPlanSetIsEnabled(enabled);
-    [self refreshMobileDataState];
+- (IBAction)valueChanged:(id)sender {
+    UISwitch *switch1 = (UISwitch *)sender;
+    [self setMobileDataEnabled:switch1.on];
 }
 
-- (BOOL)refreshMobileDataState
+- (void)setMobileDataEnabled:(BOOL)enabled
 {
-    BOOL enabled = self.mobileDataSwith.on;
-    NSString *tips = [NSString stringWithFormat:@"Mobile data enabled: %@", enabled ? @"YES":@"NO"];
-    self.tipsLabel.text = tips;
-    
-    return enabled;
+    CTCellularDataPlanSetIsEnabled(enabled);
+    self.mobileDataSwith.on = CTCellularDataPlanGetIsEnabled();
 }
 
 @end

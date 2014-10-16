@@ -15,6 +15,15 @@
 		08436C7E19D9576C0045FBC2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08436C7C19D9576C0045FBC2 /* LaunchScreen.xib */; };
 		08436C8A19D9576C0045FBC2 /* MobileDataSwichTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08436C8919D9576C0045FBC2 /* MobileDataSwichTests.m */; };
 		088B4AE819D95867003F510D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088B4AE719D95867003F510D /* CoreTelephony.framework */; };
+		EC66B9C419F02F4B004BCD5E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC66B9C119F02C33004BCD5E /* Localizable.strings */; };
+		EC66B9C719F0302A004BCD5E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC66B9C919F0302A004BCD5E /* InfoPlist.strings */; };
+		EC66B9D119F03A3A004BCD5E /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC66B9D019F03A3A004BCD5E /* NotificationCenter.framework */; };
+		EC66B9D719F03A3A004BCD5E /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC66B9D619F03A3A004BCD5E /* TodayViewController.m */; };
+		EC66B9D919F03A3A004BCD5E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC66B9D819F03A3A004BCD5E /* MainInterface.storyboard */; };
+		EC66B9DC19F03A3A004BCD5E /* TodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EC66B9CF19F03A3A004BCD5E /* TodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EC66B9E519F03B7A004BCD5E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC66B9E719F03B7A004BCD5E /* InfoPlist.strings */; };
+		EC66B9EB19F03DAB004BCD5E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC66B9ED19F03DAB004BCD5E /* Localizable.strings */; };
+		EC66B9EF19F03F90004BCD5E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088B4AE719D95867003F510D /* CoreTelephony.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +34,35 @@
 			remoteGlobalIDString = 08436C6919D9576C0045FBC2;
 			remoteInfo = MobileDataSwich;
 		};
+		EC66B9DA19F03A3A004BCD5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08436C6219D9576C0045FBC2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC66B9CE19F03A3A004BCD5E;
+			remoteInfo = TodayExtension;
+		};
+		EC66B9DD19F03A3A004BCD5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08436C6219D9576C0045FBC2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC66B9CE19F03A3A004BCD5E;
+			remoteInfo = TodayExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EC66B9E219F03A3A004BCD5E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EC66B9DC19F03A3A004BCD5E /* TodayExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		08436C6A19D9576C0045FBC2 /* MobileDataSwich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileDataSwich.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +79,20 @@
 		08436C8819D9576C0045FBC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08436C8919D9576C0045FBC2 /* MobileDataSwichTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileDataSwichTests.m; sourceTree = "<group>"; };
 		088B4AE719D95867003F510D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		EC66B9C019F02C33004BCD5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EC66B9C219F02C43004BCD5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		EC66B9C819F0302A004BCD5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC66B9CA19F0302C004BCD5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		EC66B9CF19F03A3A004BCD5E /* TodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC66B9D019F03A3A004BCD5E /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		EC66B9D419F03A3A004BCD5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC66B9D519F03A3A004BCD5E /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		EC66B9D619F03A3A004BCD5E /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		EC66B9D819F03A3A004BCD5E /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		EC66B9E619F03B7A004BCD5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC66B9E819F03B7B004BCD5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		EC66B9EC19F03DAB004BCD5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		EC66B9EE19F03DAF004BCD5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +111,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EC66B9CC19F03A3A004BCD5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC66B9EF19F03F90004BCD5E /* CoreTelephony.framework in Frameworks */,
+				EC66B9D119F03A3A004BCD5E /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -68,6 +128,7 @@
 			children = (
 				08436C6C19D9576C0045FBC2 /* MobileDataSwich */,
 				08436C8619D9576C0045FBC2 /* MobileDataSwichTests */,
+				EC66B9D219F03A3A004BCD5E /* TodayExtension */,
 				088B4AE919D95876003F510D /* Frameworks */,
 				08436C6B19D9576C0045FBC2 /* Products */,
 			);
@@ -78,6 +139,7 @@
 			children = (
 				08436C6A19D9576C0045FBC2 /* MobileDataSwich.app */,
 				08436C8319D9576C0045FBC2 /* MobileDataSwichTests.xctest */,
+				EC66B9CF19F03A3A004BCD5E /* TodayExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +162,8 @@
 		08436C6D19D9576C0045FBC2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EC66B9C919F0302A004BCD5E /* InfoPlist.strings */,
+				EC66B9C119F02C33004BCD5E /* Localizable.strings */,
 				08436C6E19D9576C0045FBC2 /* Info.plist */,
 				08436C6F19D9576C0045FBC2 /* main.m */,
 			);
@@ -127,8 +191,30 @@
 			isa = PBXGroup;
 			children = (
 				088B4AE719D95867003F510D /* CoreTelephony.framework */,
+				EC66B9D019F03A3A004BCD5E /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC66B9D219F03A3A004BCD5E /* TodayExtension */ = {
+			isa = PBXGroup;
+			children = (
+				EC66B9D519F03A3A004BCD5E /* TodayViewController.h */,
+				EC66B9D619F03A3A004BCD5E /* TodayViewController.m */,
+				EC66B9D819F03A3A004BCD5E /* MainInterface.storyboard */,
+				EC66B9D319F03A3A004BCD5E /* Supporting Files */,
+			);
+			path = TodayExtension;
+			sourceTree = "<group>";
+		};
+		EC66B9D319F03A3A004BCD5E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC66B9D419F03A3A004BCD5E /* Info.plist */,
+				EC66B9E719F03B7A004BCD5E /* InfoPlist.strings */,
+				EC66B9ED19F03DAB004BCD5E /* Localizable.strings */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +227,13 @@
 				08436C6619D9576C0045FBC2 /* Sources */,
 				08436C6719D9576C0045FBC2 /* Frameworks */,
 				08436C6819D9576C0045FBC2 /* Resources */,
+				EC66B9E219F03A3A004BCD5E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EC66B9DB19F03A3A004BCD5E /* PBXTargetDependency */,
+				EC66B9DE19F03A3A004BCD5E /* PBXTargetDependency */,
 			);
 			name = MobileDataSwich;
 			productName = MobileDataSwich;
@@ -169,6 +258,23 @@
 			productReference = 08436C8319D9576C0045FBC2 /* MobileDataSwichTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		EC66B9CE19F03A3A004BCD5E /* TodayExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC66B9DF19F03A3A004BCD5E /* Build configuration list for PBXNativeTarget "TodayExtension" */;
+			buildPhases = (
+				EC66B9CB19F03A3A004BCD5E /* Sources */,
+				EC66B9CC19F03A3A004BCD5E /* Frameworks */,
+				EC66B9CD19F03A3A004BCD5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TodayExtension;
+			productName = TodayExtension;
+			productReference = EC66B9CF19F03A3A004BCD5E /* TodayExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -185,6 +291,9 @@
 						CreatedOnToolsVersion = 6.0.1;
 						TestTargetID = 08436C6919D9576C0045FBC2;
 					};
+					EC66B9CE19F03A3A004BCD5E = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
 				};
 			};
 			buildConfigurationList = 08436C6519D9576C0045FBC2 /* Build configuration list for PBXProject "MobileDataSwich" */;
@@ -194,6 +303,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 08436C6119D9576C0045FBC2;
 			productRefGroup = 08436C6B19D9576C0045FBC2 /* Products */;
@@ -202,6 +312,7 @@
 			targets = (
 				08436C6919D9576C0045FBC2 /* MobileDataSwich */,
 				08436C8219D9576C0045FBC2 /* MobileDataSwichTests */,
+				EC66B9CE19F03A3A004BCD5E /* TodayExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -212,8 +323,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				08436C7919D9576C0045FBC2 /* Main.storyboard in Resources */,
+				EC66B9C419F02F4B004BCD5E /* Localizable.strings in Resources */,
 				08436C7E19D9576C0045FBC2 /* LaunchScreen.xib in Resources */,
 				08436C7B19D9576C0045FBC2 /* Images.xcassets in Resources */,
+				EC66B9C719F0302A004BCD5E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +334,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC66B9CD19F03A3A004BCD5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC66B9D919F03A3A004BCD5E /* MainInterface.storyboard in Resources */,
+				EC66B9EB19F03DAB004BCD5E /* Localizable.strings in Resources */,
+				EC66B9E519F03B7A004BCD5E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +368,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EC66B9CB19F03A3A004BCD5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC66B9D719F03A3A004BCD5E /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -252,6 +383,16 @@
 			isa = PBXTargetDependency;
 			target = 08436C6919D9576C0045FBC2 /* MobileDataSwich */;
 			targetProxy = 08436C8419D9576C0045FBC2 /* PBXContainerItemProxy */;
+		};
+		EC66B9DB19F03A3A004BCD5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC66B9CE19F03A3A004BCD5E /* TodayExtension */;
+			targetProxy = EC66B9DA19F03A3A004BCD5E /* PBXContainerItemProxy */;
+		};
+		EC66B9DE19F03A3A004BCD5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC66B9CE19F03A3A004BCD5E /* TodayExtension */;
+			targetProxy = EC66B9DD19F03A3A004BCD5E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -270,6 +411,43 @@
 				08436C7D19D9576C0045FBC2 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		EC66B9C119F02C33004BCD5E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC66B9C019F02C33004BCD5E /* en */,
+				EC66B9C219F02C43004BCD5E /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			path = MobileDataSwichTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		EC66B9C919F0302A004BCD5E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC66B9C819F0302A004BCD5E /* en */,
+				EC66B9CA19F0302C004BCD5E /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EC66B9E719F03B7A004BCD5E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC66B9E619F03B7A004BCD5E /* en */,
+				EC66B9E819F03B7B004BCD5E /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EC66B9ED19F03DAB004BCD5E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC66B9EC19F03DAB004BCD5E /* zh-Hans */,
+				EC66B9EE19F03DAF004BCD5E /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -405,6 +583,32 @@
 			};
 			name = Release;
 		};
+		EC66B9E019F03A3A004BCD5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TodayExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EC66B9E119F03A3A004BCD5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TodayExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -434,6 +638,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		EC66B9DF19F03A3A004BCD5E /* Build configuration list for PBXNativeTarget "TodayExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC66B9E019F03A3A004BCD5E /* Debug */,
+				EC66B9E119F03A3A004BCD5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
