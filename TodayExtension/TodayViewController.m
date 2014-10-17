@@ -14,6 +14,8 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
 
 @interface TodayViewController () <NCWidgetProviding>
 
+
+@property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UIButton *cellularButton;
 
 - (IBAction)celluarButtonAction:(id)sender;
@@ -27,7 +29,8 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
-    self.preferredContentSize = CGSizeMake(CGRectGetWidth(self.view.frame), 64);
+//    self.preferredContentSize = CGSizeMake(CGRectGetWidth(self.view.frame), 64);
+    self.label.text = NSLocalizedString(@"Cellular Data", nil);
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -40,7 +43,7 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
     if (self.cellularButton.selected) {
         self.cellularButton.alpha = 1;
     } else {
-        self.cellularButton.alpha = 0.5;
+        self.cellularButton.alpha = 0.25;
     }
     
     
@@ -54,11 +57,19 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
 - (void)widgetPerformUpdateWithCompletionHandler:(void (^)(NCUpdateResult))completionHandler {
     // Perform any setup necessary in order to update the view.
     
+//    self.preferredContentSize = CGSizeMake(CGRectGetWidth(self.view.frame), 64);
+    
     // If an error is encountered, use NCUpdateResultFailed
     // If there's no update required, use NCUpdateResultNoData
     // If there's an update, use NCUpdateResultNewData
 
     completionHandler(NCUpdateResultNewData);
+}
+
+- (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)defaultMarginInsets
+{
+    defaultMarginInsets.bottom = 0;
+    return defaultMarginInsets;
 }
 
 #pragma mark - IBAction
@@ -74,10 +85,13 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
     if (self.cellularButton.selected) {
         self.cellularButton.alpha = 1;
     } else {
-        self.cellularButton.alpha = 0.5;
+        self.cellularButton.alpha = 0.25;
     }
 }
 
-
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    
+}
 
 @end

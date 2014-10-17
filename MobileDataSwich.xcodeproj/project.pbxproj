@@ -22,6 +22,7 @@
 		EC66B9DC19F03A3A004BCD5E /* TodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EC66B9CF19F03A3A004BCD5E /* TodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EC66B9E519F03B7A004BCD5E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC66B9E719F03B7A004BCD5E /* InfoPlist.strings */; };
 		EC66B9EF19F03F90004BCD5E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088B4AE719D95867003F510D /* CoreTelephony.framework */; };
+		EC90E93A19F101850079839F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC90E93C19F101850079839F /* Localizable.strings */; };
 		ECDB0C8219F0B07B00F2083B /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDB0C8119F0B07B00F2083B /* TableViewController.m */; };
 		ECDB0C8319F0C20C00F2083B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08436C7A19D9576C0045FBC2 /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -89,6 +90,8 @@
 		EC66B9D819F03A3A004BCD5E /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		EC66B9E619F03B7A004BCD5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EC66B9E819F03B7B004BCD5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		EC90E93B19F101850079839F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EC90E93D19F101870079839F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		ECDB0C8019F0B07B00F2083B /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		ECDB0C8119F0B07B00F2083B /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -209,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				EC66B9D419F03A3A004BCD5E /* Info.plist */,
+				EC90E93C19F101850079839F /* Localizable.strings */,
 				EC66B9E719F03B7A004BCD5E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -339,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECDB0C8319F0C20C00F2083B /* Images.xcassets in Resources */,
+				EC90E93A19F101850079839F /* Localizable.strings in Resources */,
 				EC66B9D919F03A3A004BCD5E /* MainInterface.storyboard in Resources */,
 				EC66B9E519F03B7A004BCD5E /* InfoPlist.strings in Resources */,
 			);
@@ -438,6 +443,15 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		EC90E93C19F101850079839F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC90E93B19F101850079839F /* en */,
+				EC90E93D19F101870079839F /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -522,9 +536,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Suzhou Bona Xundong Software Co., Ltd";
 				INFOPLIST_FILE = MobileDataSwich/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "BB1956BF-1693-4017-A0CD-75759CB2C6F8";
 			};
 			name = Debug;
 		};
@@ -533,9 +550,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Suzhou Bona Xundong Software Co., Ltd";
 				INFOPLIST_FILE = MobileDataSwich/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "BB1956BF-1693-4017-A0CD-75759CB2C6F8";
 			};
 			name = Release;
 		};
@@ -576,6 +596,7 @@
 		EC66B9E019F03A3A004BCD5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Suzhou Bona Xundong Software Co., Ltd";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -584,6 +605,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "BB1956BF-1693-4017-A0CD-75759CB2C6F8";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -591,10 +613,12 @@
 		EC66B9E119F03A3A004BCD5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Suzhou Bona Xundong Software Co., Ltd";
 				INFOPLIST_FILE = TodayExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "BB1956BF-1693-4017-A0CD-75759CB2C6F8";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

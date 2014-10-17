@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pg8-pB-IvO">
-                                <rect key="frame" x="140" y="12" width="40" height="40"/>
+                                <rect key="frame" x="254" y="9" width="46" height="46"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="aBa-Cy-uww"/>
-                                    <constraint firstAttribute="width" constant="40" id="lUn-ys-UHt"/>
+                                    <constraint firstAttribute="height" constant="46" id="EaY-yB-R9n"/>
+                                    <constraint firstAttribute="width" constant="46" id="rbf-90-Hsu"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="Icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -28,17 +28,27 @@
                                 <state key="selected" backgroundImage="Icon"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
+                                        <integer key="value" value="23"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="celluarButtonAction:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="XKF-f8-Zie"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykn-ma-weI">
+                                <rect key="frame" x="10" y="21" width="45" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="Pg8-pB-IvO" secondAttribute="centerX" id="FFy-Cd-hLv"/>
-                            <constraint firstAttribute="centerY" secondItem="Pg8-pB-IvO" secondAttribute="centerY" id="Oym-h7-FgJ"/>
+                            <constraint firstItem="Pg8-pB-IvO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ykn-ma-weI" secondAttribute="trailing" constant="20" id="8Kg-TA-Ior"/>
+                            <constraint firstAttribute="trailing" secondItem="Pg8-pB-IvO" secondAttribute="trailing" constant="20" id="QWL-RE-byc"/>
+                            <constraint firstItem="Ykn-ma-weI" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="21" id="d8E-nh-cmi"/>
+                            <constraint firstAttribute="centerY" secondItem="Pg8-pB-IvO" secondAttribute="centerY" id="nE2-e7-hcT"/>
+                            <constraint firstItem="Ykn-ma-weI" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="10" id="vgQ-Jq-zCi"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="Ykn-ma-weI" secondAttribute="bottom" constant="21" id="xkR-BN-r56"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -49,6 +59,7 @@
                     <size key="freeformSize" width="320" height="64"/>
                     <connections>
                         <outlet property="cellularButton" destination="Pg8-pB-IvO" id="uZs-dp-QU2"/>
+                        <outlet property="label" destination="Ykn-ma-weI" id="w0h-70-kdA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -57,7 +68,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon" width="30" height="30"/>
+        <image name="Icon" width="60" height="60"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

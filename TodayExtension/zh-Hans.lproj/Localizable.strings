@@ -1,9 +1,9 @@
 /* 
-  InfoPlist.strings
+  Localizable.strings
   MobileDataSwich
 
   Created by victorjiang on 10/17/14.
   Copyright (c) 2014 ly. All rights reserved.
 */
 
-"CFBundleDisplayName" = "蜂窝网络开关";
+"Cellular Data" = "蜂窝移动数据";
