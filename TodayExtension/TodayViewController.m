@@ -14,8 +14,9 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
 
 @interface TodayViewController () <NCWidgetProviding>
 
-@property (weak, nonatomic) IBOutlet UILabel *label;
-@property (weak, nonatomic) IBOutlet UISwitch *switch1;
+@property (weak, nonatomic) IBOutlet UIButton *cellularButton;
+
+- (IBAction)celluarButtonAction:(id)sender;
 
 
 @end
@@ -25,7 +26,8 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.label.text = NSLocalizedString(@"Cellular Data", nil);
+
+    self.preferredContentSize = CGSizeMake(CGRectGetWidth(self.view.frame), 64);
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -33,7 +35,15 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
     [super viewDidAppear:animated];
     
     BOOL enabled = CTCellularDataPlanGetIsEnabled();
-    self.switch1.on = enabled;
+    self.cellularButton.selected = enabled;
+    
+    if (self.cellularButton.selected) {
+        self.cellularButton.alpha = 1;
+    } else {
+        self.cellularButton.alpha = 0.5;
+    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,15 +62,22 @@ extern void CTCellularDataPlanSetIsEnabled(BOOL enabled);
 }
 
 #pragma mark - IBAction
-- (IBAction)valueChanged:(id)sender {
-    UISwitch *switch1 = (UISwitch *)sender;
-    [self setMobileDataEnabled:switch1.on];
+- (IBAction)celluarButtonAction:(id)sender {
+    [self setMobileDataEnabled:!self.cellularButton.selected];
 }
 
 - (void)setMobileDataEnabled:(BOOL)enabled
 {
     CTCellularDataPlanSetIsEnabled(enabled);
-    self.switch1.on = CTCellularDataPlanGetIsEnabled();
+    self.cellularButton.selected = CTCellularDataPlanGetIsEnabled();
+    
+    if (self.cellularButton.selected) {
+        self.cellularButton.alpha = 1;
+    } else {
+        self.cellularButton.alpha = 0.5;
+    }
 }
+
+
 
 @end

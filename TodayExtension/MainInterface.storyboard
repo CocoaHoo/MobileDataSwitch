@@ -16,27 +16,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
-                                <rect key="frame" x="0.0" y="21" width="89" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NFF-9J-wrR">
-                                <rect key="frame" x="251" y="16" width="51" height="31"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pg8-pB-IvO">
+                                <rect key="frame" x="140" y="12" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="aBa-Cy-uww"/>
+                                    <constraint firstAttribute="width" constant="40" id="lUn-ys-UHt"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Icon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="Icon"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="valueChanged:" destination="M4Y-Lb-cyx" eventType="valueChanged" id="LlZ-nE-ccx"/>
+                                    <action selector="celluarButtonAction:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="XKF-f8-Zie"/>
                                 </connections>
-                            </switch>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="NFF-9J-wrR" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="16" id="0Fe-7L-zfz"/>
-                            <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="6Vq-gs-PHe"/>
-                            <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="21" id="ObE-58-gwN"/>
-                            <constraint firstAttribute="trailing" secondItem="NFF-9J-wrR" secondAttribute="trailing" constant="20" id="ggc-e2-VWs"/>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="NFF-9J-wrR" secondAttribute="bottom" constant="17" id="l7t-QA-ZMC"/>
-                            <constraint firstItem="NFF-9J-wrR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GcN-lo-r42" secondAttribute="trailing" constant="20" id="sbB-Ui-432"/>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="GcN-lo-r42" secondAttribute="bottom" constant="22" id="tyO-jh-bSU"/>
+                            <constraint firstAttribute="centerX" secondItem="Pg8-pB-IvO" secondAttribute="centerX" id="FFy-Cd-hLv"/>
+                            <constraint firstAttribute="centerY" secondItem="Pg8-pB-IvO" secondAttribute="centerY" id="Oym-h7-FgJ"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -46,8 +48,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="64"/>
                     <connections>
-                        <outlet property="label" destination="GcN-lo-r42" id="GLr-qD-YVI"/>
-                        <outlet property="switch1" destination="NFF-9J-wrR" id="Cah-Du-aIW"/>
+                        <outlet property="cellularButton" destination="Pg8-pB-IvO" id="uZs-dp-QU2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -55,6 +56,9 @@
             <point key="canvasLocation" x="516" y="284.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Icon" width="30" height="30"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
